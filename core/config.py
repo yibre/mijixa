@@ -5,11 +5,11 @@ load_dotenv()
 
 
 class Config(BaseSettings):
-    app_name: str = "ScalableFastAPIProject"
+    app_name: str = "mijixa"
     debug: bool = False
-    db_user: str = ""
+    db_user: str = "postgres"
     db_password: str = ""
-    db_name: str = "test.db"
+    db_name: str = "mijixa2025.db"
 
     @property
     def db_url(self):
