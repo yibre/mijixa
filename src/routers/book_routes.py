@@ -5,8 +5,8 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 from typing import List
 from src.db.main import get_session
 from http import HTTPStatus
-from .service import BookService
-from .schemas import BookCreateModel, BookResponseModel
+from ..services.book_service import BookService
+from ..schemas.book_schema import BookCreateModel, BookResponseModel
 
 book_router = APIRouter(prefix="/books")
 
