@@ -19,6 +19,19 @@ from contextlib import asynccontextmanager
 # Step-9: Create all endpoints of todo app
 
 
+class User(SQLModel, table = True):
+    """
+    """
+    __tablename__ = 'users'
+    uid:UUID = Field(
+        sa_column=Column(pg.UUID, primary_key=True,
+        unique=True, default=uuid4)
+    )
+    username: str
+    sign_up_date: datetime = Field((sa_column=Column(pg.TIMESTAMP, default=datetime.now)))
+    email: str
+
+
 class Todo (SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     content: str = Field(index=True, min_length=3, max_length=54)

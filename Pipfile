@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+annotated-types = "*"
+anyio = "*"
+async-timeout = "*"
+asyncpg = "*"
+click = "*"
+exceptiongroup = "*"
+fastapi = "*"
+greenlet = "*"
+h11 = "*"
+idna = "*"
+pydantic = "*"
+pydantic-settings = "*"
+pydantic-core = "*"
+python-dotenv = "*"
+sniffio = "*"
+sqlalchemy = "*"
+sqlmodel = "*"
+starlette = "*"
+typing-extensions = "*"
+uvicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.14"
