@@ -30,6 +30,10 @@ class User(SQLModel, table = True):
     username: str
     sign_up_date: datetime = Field((sa_column=Column(pg.TIMESTAMP, default=datetime.now)))
     email: str
+    provider: str
+    profile_pic_path: str
+    # 현 시점 user는 의미없는 데이터기에 사용하지 않기로.
+    # 편집하는 인류의 선의를 믿겠다.
 
 
 class Todo (SQLModel, table=True):
